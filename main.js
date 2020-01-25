@@ -298,4 +298,33 @@ const doItIsComplete = todos.map(function(doIt){
 })
     console.log(doItIsComplete);
 
-// main.js:299 (3) [true, false, true]
+// main.js:299 (3) [true, false, true] 
+
+// Filter method. let's say we only want to return the to do (doIt) items that are completed
+
+const doItCompleted = todos.filter(function(doIt){
+    return doIt.isComplete === true;
+})
+    console.log(doItCompleted);
+// main.js:308 
+// (2) [{…}, {…}]
+// 0: {id: 1, text: "go to store", isComplete: true}
+// 1: {id: 3, text: "eat lunch", isComplete: true}
+// length: 2
+// __proto__: Array(0)
+
+// We can also chain on other array methods, so let's say we want to also map and just get the text like we did before
+
+const doItComplete = todos.filter(function(doIt){
+    return doIt.isComplete === true;
+}).map(function(todo) {
+ return todo.text;
+})
+console.log(doItComplete);
+
+    // main.js:323 
+    // (2) ["go to store", "eat lunch"]
+    // 0: "go to store"
+    // 1: "eat lunch"
+    // length: 2
+    // __proto__: Array(0)
