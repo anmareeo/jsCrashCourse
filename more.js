@@ -83,3 +83,52 @@ let y = 11;
 // } 
 // }
 // This is just a harder way of doing the same thing.
+// *****************
+
+//Ternary Operator --It is shorthand for an if statement and it is used a lot to assign variables based on a condition.
+
+
+//want to assign a color based on whether t is greater than 10. the ? is the terniary operator and it represents "then" in the if-then statement. The colon is shorthand for else.
+const t = 4;
+const color = t > 10 ? 'red' : 'blue';
+// Direct translation of the line above: If t is greater than 10, assign the color red, but if t is not greater than 10, assign the color blue.
+
+//Here we are telling the browser to display a certain color based on the value of the variable t. We have told it at the top that that t is 11. The computer checks the value of t to determine what color to display. The console displayed 'red'. Then i changed t to equal 4, and the console displayed blue.
+//Note that this is just like an if, else statement where the ? means "then" and the ":" means "else." 
+// The question mark is called the terniary operator.
+
+//Switch - this uses case (if this is the case, then...) also uses the term break.
+// const s = 12;
+// const sColor = s > 10 ? 'red' : 'blue';
+
+// switch(sColor) {
+//     case 'red':
+//     console.log ('color is red');
+//     break;
+//     case 'blue':
+//     console.log ('color is blue');
+//     break;
+//     default:
+//     console.log ('color is neither red nor blue')
+
+// }
+
+// more.js:106 color is red
+// we got the color red because s is greater than 10
+
+// now watch what happens when we change the color to green.
+const s = 12;
+const sColor = 'green'
+
+switch(sColor) {
+    case 'red':
+    console.log ('color is red');
+    break;
+    case 'blue':
+    console.log ('color is blue');
+    break;
+    default:
+    console.log ('color is neither red nor blue')
+
+}
+// more.js:131 color is neither red nor blue
